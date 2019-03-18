@@ -5,7 +5,25 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      ;P
+        <header className="Header__container">
+        <h1 className="Header__title">spotahome</h1>
+        <ul className="Menu__link">
+          <li className="Menu__link--item">The company</li>
+          <li className="Menu__link--item">How we work</li>
+          <li className="Menu__link--item">Contact us</li>
+        </ul>
+        </header>
+        <main className="Main__container">
+          <ul className="ResultList__container">
+            <li className="ResultList__item">
+              <img className="Room__img" src="" alt=""></img>
+              <p className="Room__description"></p>
+              <p className="Room__price"></p>
+              <button className="Room__moreDetails" type="button">More Details</button>
+              <button className="Room__book" type="button">Book Now!</button>
+            </li>
+          </ul>
+        </main>
       </div>
     );
   }
