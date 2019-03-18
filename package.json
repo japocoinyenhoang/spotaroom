@@ -26,5 +26,5 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "proxy": "https://frontend-interview.spotahome.com"
+  "proxy": "https://frontend-interview.spotahome.com/"
 }

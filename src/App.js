@@ -1,7 +1,22 @@
 import React, { Component } from 'react';
 import './App.css';
-
+const ENDPOINT='https://frontend-interview.spotahome.com/api/homecards';
 class App extends Component {
+  constructor (props){
+    super(props);
+    this.state ={
+      rooms :[]
+    }
+    this.getRoomResult();
+  };
+
+  getRoomResult(){
+    fetch(ENDPOINT)
+    .then(response=> response.json())
+    .then(data =>{
+      console.log(data);
+    });
+  }
   render() {
     return (
       <div className="App">
