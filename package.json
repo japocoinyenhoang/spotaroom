@@ -9,7 +9,9 @@
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "react-scroll-horizontal": "^1.6.2",
+    "react-scrollbar": "^0.5.4"
   },
   "scripts": {
     "start": "react-scripts start",

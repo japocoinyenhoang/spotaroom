@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import './App.css';
-const ENDPOINT='https://frontend-interview.spotahome.com/api/homecards';
+import {getRooms} from './services/RoomApiService';
+import MenuLink from './components/MenuLink';
+import RoomList from './components/RoomList';
+import ScrollArea from 'react-scrollbar';
+import './App.scss';
 class App extends Component {
   constructor (props){
     super(props);
@@ -11,33 +14,25 @@ class App extends Component {
   };
 
   getRoomResult(){
-    fetch(ENDPOINT)
-    .then(response=> response.json())
+    getRooms()
     .then(data =>{
-      console.log(data);
+      const newData =data.homecards.map ((item, index) =>{return {...item, id:index}});
+      this.setState({
+        rooms: newData
+      })
     });
   }
   render() {
     return (
-      <div className="App">
+      <div className="Wrap App">
         <header className="Header__container">
-        <h1 className="Header__title">spotahome</h1>
-        <ul className="Menu__link">
-          <li className="Menu__link--item">The company</li>
-          <li className="Menu__link--item">How we work</li>
-          <li className="Menu__link--item">Contact us</li>
-        </ul>
+        <h1 className="Header__title">spotaroom</h1>
+          <MenuLink />
         </header>
         <main className="Main__container">
-          <ul className="ResultList__container">
-            <li className="ResultList__item">
-              <img className="Room__img" src="" alt=""></img>
-              <p className="Room__description"></p>
-              <p className="Room__price"></p>
-              <button className="Room__moreDetails" type="button">More Details</button>
-              <button className="Room__book" type="button">Book Now!</button>
-            </li>
-          </ul>
+          <ScrollArea>
+           <RoomList rooms={this.state.rooms}/>
+          </ScrollArea>
         </main>
       </div>
     );

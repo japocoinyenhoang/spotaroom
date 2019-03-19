@@ -1,0 +1,17 @@
+@import './core/variables';
+.Menu__link{
+  display: none;
+  font-family: $font-primary;
+  @media all and (min-width: 768px){
+    display: flex;
+    flex-direction: column;
+  }
+  @media all and (min-width: 1024px){
+    flex-direction: row;
+  }
+}
+.Menu__link--item{
+  text-decoration: none;
+  color: $text-middle;
+  margin: auto 10px;
+}

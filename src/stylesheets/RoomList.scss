@@ -1,0 +1,27 @@
+@import './core/variables';
+.ResultList__container{
+  overflow-y: scroll;
+  text-align: center;
+  font-family: $font-primary;
+  font-size: 1.5rem;
+  padding: 20px;
+  border: 1px $brand-dark solid;
+  box-shadow: 2px $brand-light;
+  color: $brand-light;
+}
+
+.ResultList__item{
+  display: grid;
+  grid-template-rows: repeat(4,auto);
+  grid-row-gap: 10px;
+  margin: 20px 0;
+  padding: 10px;
+  list-style: none;
+  border: 2px $brand-light solid;
+  border-radius: 5px;
+ @media all and (min-width: 768px){
+   grid-template-columns: repeat(2, auto);
+   grid-row-gap: 0px;
+   padding: 25px;
+ }
+}
