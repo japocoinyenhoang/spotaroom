@@ -1,20 +1,25 @@
 @import './stylesheets/core/variables';
+
 .Wrap{
   margin: 20px;
   @media all and (min-width: 1024px){
     margin:50px;
   }
 }
+
 .Header__container{
   font-family: $font-primary;
-  padding:  0 15px;
+  color: $brand-light;
+  padding:  0 20px;
   border: 1px $brand-dark solid;
   box-shadow: 2px $brand-light;
-  color: $brand-light;
-  @media all and (min-width:768px){
+  @media all and (min-width: 768px){
     font-size: 1.2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  @media all and (min-width: 1024px){
+    font-size: 1.5rem;
   }
 }

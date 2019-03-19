@@ -1,10 +1,11 @@
 import React, {Component,Fragment} from "react";
+import PropTypes from 'prop-types';
 import BtnMoreDetails from './BtnMoreDetails';
 import '../stylesheets/RoomDetails.scss';
 
 class RoomDetails extends Component {
   render() {
-    const {photo, title, price, currency}= this.props;
+    const {photo, title, price, currency} = this.props;
     return (
       <Fragment>
         <img className="Room__img" src={photo} alt="bedroom"></img>
@@ -17,6 +18,13 @@ class RoomDetails extends Component {
       </Fragment>
     );
   }
+}
+
+RoomDetails.propTypes={
+  photo: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  currency: PropTypes.string.isRequired
 }
 
 export default RoomDetails;

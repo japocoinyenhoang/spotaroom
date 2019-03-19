@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {getRooms} from './services/RoomApiService';
 import MenuLink from './components/MenuLink';
 import RoomList from './components/RoomList';
-import ScrollArea from 'react-scrollbar';
 import './App.scss';
 class App extends Component {
   constructor (props){
@@ -10,6 +9,7 @@ class App extends Component {
     this.state ={
       rooms :[]
     }
+
     this.getRoomResult();
   };
 
@@ -30,9 +30,7 @@ class App extends Component {
           <MenuLink />
         </header>
         <main className="Main__container">
-          <ScrollArea>
            <RoomList rooms={this.state.rooms}/>
-          </ScrollArea>
         </main>
       </div>
     );

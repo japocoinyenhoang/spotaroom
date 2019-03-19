@@ -1,4 +1,5 @@
 @import './core/variables';
+
 .Menu__link{
   display: none;
   font-family: $font-primary;
@@ -8,8 +9,10 @@
   }
   @media all and (min-width: 1024px){
     flex-direction: row;
+    font-size: 1.2rem;
   }
 }
+
 .Menu__link--item{
   text-decoration: none;
   color: $text-middle;
